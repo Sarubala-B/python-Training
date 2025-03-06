@@ -1,0 +1,26 @@
+import os
+
+os.remove("example.txt")
+
+if os.path.exists("example.txt"):
+    os.remove("example.txt")  # Deletes the file
+    print("File deleted!")
+else:
+    print("File does not exist.")
+
+
+# # Delete Folder
+# os.rmdir("myfolder")
+
+
+# Renaming a File
+os.rename("old_name.txt", "new_name.txt")
+
+
+# Working with Binary Files
+
+with open("image.jpg", "rb") as file:
+    data = file.read()
+
+with open("copy.jpg", "wb") as file:
+    file.write(data)
